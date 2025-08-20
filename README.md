@@ -45,19 +45,4 @@ Lombok
 
 Maven
 
----------------------------------------------------------------------------
-🧪 API Testleri
 
-Proje, Postman ile test edilebilir.
-Örnek endpointler:
-
-Kayıt ol: POST /api/auth/register
-
-Login: POST /api/auth/login
-
-Tweet paylaş: POST /api/tweets
-
-Tweetleri listele: GET /api/tweets
-
-Like et: POST /api/tweets/{id}/like
-Like et: POST /api/tweets/{id}/like
