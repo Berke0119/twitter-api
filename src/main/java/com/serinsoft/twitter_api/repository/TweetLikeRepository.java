@@ -10,7 +10,7 @@ public interface TweetLikeRepository extends JpaRepository<TweetLike, UUID> {
 
     Optional<TweetLike> findByTweet_IdAndUser_Id(UUID tweetId, UUID userId);
 
-    boolean existByTweet_IdAndUser_Id(UUID tweetId, UUID userId);
+    boolean existsByTweet_IdAndUser_Id(UUID tweetId, UUID userId);
 
     long countByTweet_Id(UUID tweetId);
 

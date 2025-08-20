@@ -36,11 +36,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 String username = c.get("username", String.class);
 
                 PrincipalUser principal = new PrincipalUser(userId, username);
-                // Basit: rolleri boş bırakıyoruz; gerekirse GrantedAuthority ekleyebilirsin
+
                 var auth = new UsernamePasswordAuthenticationToken(principal, null, List.of());
                 SecurityContextHolder.getContext().setAuthentication(auth);
             } catch (Exception ignored) {
-                // token hatalıysa context'e auth koyma, entrypoint 401 döner
+
             }
         }
         chain.doFilter(req, res);
